@@ -6,7 +6,7 @@ import styles from '../styles/image.module.css';
 import Link from 'next/link';
 
 
-let image = () => {
+let Image = () => {
     const router = useRouter();
     const data = router.query;
     const [isDeleting, setIsDeleting] = useState(false);
@@ -89,4 +89,4 @@ let image = () => {
 }
 
 export const getServerSideProps = withPageAuthRequired()
-export default image
+export default Image
