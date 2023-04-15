@@ -1,0 +1,119 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 15px;
+    justify-content: center; /* horizontally center grid items */
+  }
+  
+.img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    max-width: 100%
+  }
+
+.a{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.fileUpload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectFile {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.uploadButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.uploadButton:hover {
+  background-color: #0069d9;
+}
+
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  background-color: purple;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #6b46c1;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.uploadButton {
+  margin-top: 16px;
+}
+.fileInput {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.fileName {
+  display: none;
+}
+.fileInputText {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.fileInputButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #6b46c1;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  padding: 8px 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.fileInputButton:hover {
+  background-color: #523a99;
+}
+.file-name {
+  display: inline-block;
+  padding: 0.5rem;
+  background-color: #f5f5f5;
+  color: #333;
+  border-radius: 0.25rem;
+}
