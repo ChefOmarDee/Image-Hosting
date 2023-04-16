@@ -10,7 +10,7 @@ const metadataSchema = new mongoose.Schema({
   _id: String,
   user: String,
 }, { collection: 'chefomardee-testing' });
-//mongodb call
+//mongodb call for document
 const modelName = 'von';
 let imag;
 if (mongoose.models[modelName]) {
