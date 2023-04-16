@@ -103,59 +103,59 @@ function ProtectedPage() {
   }, [imageUrls]);
 
   return (
-    <div className="container flex items-center p-4 mx-auto min-h-screen justify-center">
-    {/* File Upload Section */}
-    <main className={styles.fileUpload}>
-      <p className={styles.selectFile}>Please select a file to upload</p>
-      <p className={styles.selectFile}>You may click any image to look at its meta data as well as look at options such as deleting and downloading</p>
+<div className="container flex items-center p-4 mx-auto min-h-screen justify-center">
+  {/* File Upload Section */}
+  <main className={styles.fileUpload}>
+    <p className={styles.selectFile}>Please select a file to upload</p>
+    <p className={styles.selectFile}>You may click any image to look at its meta data as well as look at options such as deleting and downloading</p>
+    <br></br>
+    <div className={styles.inputWrapper}>
+      <input
+        id="inputFile"
+        type="file"
+        onChange={selectFile}
+        className={styles.input}
+      />
+      <center><button className={styles.button}>Choose File</button></center>
       <br></br>
-      <div className={styles.inputWrapper}>
-        <input
-          id="inputFile"
-          type="file"
-          onChange={selectFile}
-          className={styles.input}
-        />
-        <center><button className={styles.button}>Choose File</button></center>
-        <br></br>
-        <span className="file-name">{file ? file.name : ""}</span>
-      </div>
-      {file && (
-        <React.Fragment>
-           <button
-            onClick={uploadFile}
-            className={styles.button}
-          >
-            Upload a File!
-          </button>
-        </React.Fragment>
-      )}
-      {uploadingStatus && <p>{uploadingStatus}</p>}
-    </main>
-
-    <div className={styles.container}>
-      {isReady &&
-        imageUrls.map((url) => (
-          <React.Fragment key={url}>
-            <Link
-              href={{
-                pathname: '/ViewImage',
-                query: {
-                  imgname: url,
-                },
-              }}
-            >
-              <img
-                src={url}
-                className={styles.img}
-                alt="uploaded image"
-              />
-            </Link>
-          </React.Fragment>
-        ))}
-       
+      <span className="file-name">{file ? file.name : ""}</span>
     </div>
+    {file && (
+      <React.Fragment>
+         <button
+          onClick={uploadFile}
+          className={styles.button}
+        >
+          Upload a File!
+        </button>
+      </React.Fragment>
+    )}
+    {uploadingStatus && <p>{uploadingStatus}</p>}
+  </main>
+
+  <div className={styles.container}>
+    {isReady &&
+      imageUrls.map((url) => (
+        <React.Fragment key={url}>
+          <Link
+            href={{
+              pathname: '/ViewImage',
+              query: {
+                imgname: url,
+              },
+            }}
+          >
+            <img
+              src={url}
+              className={styles.img}
+              alt="uploaded image"
+            />
+          </Link>
+        </React.Fragment>
+      ))}
+     
   </div>
+</div>
 
   );
 }
