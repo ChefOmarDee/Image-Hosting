@@ -95,6 +95,14 @@ function ProtectedPage() {
             } // the data
           }}
         >
+          <Link
+          href={{
+            pathname: '/MIC',
+            query: {
+              name:"omar",
+            } // the data
+          }}
+        ></Link>
           <img src={url} className={styles.img} alt="uploaded image"  />
         </Link>
       </React.Fragment>
