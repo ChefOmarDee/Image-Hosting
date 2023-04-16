@@ -8,7 +8,7 @@ AWS.config.update({
   region: 'us-east-1',
 });
 
-// create S3 instance
+// create S3 instances
 const s3 = new AWS.S3();
 
 let handler= async (req, res) => {
