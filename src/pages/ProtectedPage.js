@@ -153,16 +153,7 @@ function ProtectedPage() {
             </Link>
           </React.Fragment>
         ))}
-        <Link
-          href={{
-            pathname: '/MIC',
-            query: {
-              name:"omar",
-            } // the data
-          }}
-        >
-          Clicket
-        </Link>
+       
     </div>
   </div>
 
