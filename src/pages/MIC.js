@@ -5,7 +5,7 @@ let MIC=()=>{
     const router = useRouter();
     const data = router.query;
     return(
-        <p>wassup{data}</p>
+        <p>wassup{data.name}</p>
     )
 }
 export default MIC

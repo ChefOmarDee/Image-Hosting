@@ -95,16 +95,9 @@ function ProtectedPage() {
             } // the data
           }}
         >
-          <Link
-          href={{
-            pathname: '/MIC',
-            query: {
-              name:"omar",
-            } // the data
-          }}
-        ></Link>
           <img src={url} className={styles.img} alt="uploaded image"  />
         </Link>
+        
       </React.Fragment>
     ));
   }, [imageUrls]);
@@ -160,6 +153,16 @@ function ProtectedPage() {
             </Link>
           </React.Fragment>
         ))}
+        <Link
+          href={{
+            pathname: '/MIC',
+            query: {
+              name:"omar",
+            } // the data
+          }}
+        >
+          Clicket
+        </Link>
     </div>
   </div>
 
