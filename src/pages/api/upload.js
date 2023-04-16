@@ -45,7 +45,7 @@ if (mongoose.models[modelName]) {
       ContentType: type,
       Tagging: `user=${session.user.sub}`
     };
-
+//sus
     const url = await s3.getSignedUrlPromise("putObject", fileParams);
     
 
