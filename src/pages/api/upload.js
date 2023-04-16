@@ -4,8 +4,8 @@ import mongoose from 'mongoose';
 
 const s3 = new S3({
   region: "us-east-1",
-  accessKeyId: process.env._ACCESS_KEY_ID,
-  secretAccessKey: process.env._SECRET_ACCESS_KEY,
+  accessKeyId: process.env.ACCESS_KEY_ID,
+  secretAccessKey: process.env.SECRET_ACCESS_KEY,
   signatureVersion: "v4",
 });
 
@@ -39,7 +39,7 @@ if (mongoose.models[modelName]) {
     const session = await getSession(req, res);
     console.log(await Image.deleteOne({ _id:tru}))
     const fileParams = {
-      Bucket: process.env._BUCKET_NAME,
+      Bucket: process.env.BUCKET_NAME,
       Key: name,
       Expires: 600,
       ContentType: type,
