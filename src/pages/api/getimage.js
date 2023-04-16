@@ -3,8 +3,8 @@ import { withApiAuthRequired } from '@auth0/nextjs-auth0';
 const AWS = require('aws-sdk');
 // configure AWS SDK
 AWS.config.update({
-  accessKeyId: process.env.ACCESS_KEY_ID,
-  secretAccessKey: process.env.SECRET_ACCESS_KEY,
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
   region: 'us-east-1',
 });
 
@@ -13,7 +13,7 @@ const s3 = new AWS.S3();
 
 let handler= async (req, res) => {
   const params = {
-    Bucket: 'chefomardee-testing',
+    Bucket: process.env.AWS_BUCKET_NAME,
   };
 
   try {
