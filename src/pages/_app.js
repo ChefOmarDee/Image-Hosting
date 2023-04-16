@@ -4,7 +4,7 @@ import { UserProvider } from '@auth0/nextjs-auth0/client';
 import Nav from '@/Mods/Nav';
 import styles from '../styles/_app.module.css';
 
-//test
+//test 2
 export default function App({ Component, pageProps }) {
   return (
     <div className={styles.container}>
