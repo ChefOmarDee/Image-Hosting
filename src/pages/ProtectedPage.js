@@ -89,7 +89,7 @@ function ProtectedPage() {
       <React.Fragment key={url}>
         <Link
           href={{
-            pathname: '/Image',
+            pathname: '/ViewImage',
             query: {
               imgname: url,
             } // the data
@@ -139,7 +139,7 @@ function ProtectedPage() {
           <React.Fragment key={url}>
             <Link
               href={{
-                pathname: '/Image',
+                pathname: '/ViewImage',
                 query: {
                   imgname: url,
                 },
